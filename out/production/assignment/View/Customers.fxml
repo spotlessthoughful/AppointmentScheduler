@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="680.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="Controller.CustomerController">
+    <Label layoutX="280.0" layoutY="14.0" text="Customers" fx:id="customerLabel">
+        <font>
+            <Font name="System Bold" size="24.0"/>
+        </font>
+    </Label>
+    <TableView fx:id="customerTable" layoutX="15.0" layoutY="80.0" prefHeight="544.0" prefWidth="650.0">
+        <columns>
+            <TableColumn fx:id="customerIDColumn" prefWidth="100.0" text="ID"/>
+            <TableColumn fx:id="customerNameColumn" prefWidth="150.0" text="Name"/>
+            <TableColumn fx:id="customerAddressColumn" prefWidth="150.0" text="Address"/>
+            <TableColumn fx:id="customerPostalCodeColumn" minWidth="100.0" prefWidth="106.0" text="Postal Code"/>
+            <TableColumn fx:id="customerPhoneNumberColumn" prefWidth="150.0" text="Phone Number"/>
+        </columns>
+    </TableView>
+    <Button fx:id="addCustomerButton" layoutX="15.0" layoutY="670.0" mnemonicParsing="false"
+            onAction="#addCustomerPushed" text="Add">
+        <font>
+            <Font name="System Bold" size="14.0"/>
+        </font>
+    </Button>
+    <Button fx:id="modifyCustomerButton" layoutX="75.0" layoutY="670.0" mnemonicParsing="false"
+            onAction="#modifyCustomerPushed" text="Modify">
+        <font>
+            <Font name="System Bold" size="14.0"/>
+        </font>
+    </Button>
+    <Button fx:id="deleteCustomerButton" layoutX="165.0" layoutY="670.0" mnemonicParsing="false"
+            onAction="#deleteCustomerButtonPushed" text="Delete">
+        <font>
+            <Font name="System Bold" size="14.0"/>
+        </font>
+    </Button>
+    <Button fx:id="backButton" layoutX="615.0" layoutY="670.0" mnemonicParsing="false" onAction="#backButtonPushed"
+            text="Back">
+        <font>
+            <Font name="System Bold" size="14.0"/>
+        </font>
+    </Button>
+    <Label layoutX="25.0" layoutY="641.0" text="Customer Options"/>
+</AnchorPane>
